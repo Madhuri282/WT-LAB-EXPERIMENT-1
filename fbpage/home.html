@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="homestyle.css">
+    <title>insta</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="igheaderpic.png" alt="Logo Image" class="Logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#services">Login</a></li>
+                    <li><a href="#services">Sign up</a></li>
+                </ul>
+            </nav>
+           <!-- <div class="header-text">
+                <h1 align="center">Welcome</h1>
+                <p>live moments</p>
+                 <div align="center"><button id="buts" ><a href="#" id="bsl" >Join Us!!!</a></button></div>
+            </div>-->
+        </div>
+        
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">JOIN US</h1>
+             <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-graduation-cap" style="color: #ffffff;"></i>
+                    <h2 align="center">sign up</h2>
+                    <center>
+                    <form action="loginvalid.php" method="post">
+                        <table cellspacing="15px" cellpadding="0px">
+                            <tr>
+                                <td><label>First Name: </label></td>
+                                <td><input type="text" id="fname" name="fname"></td>                                
+                            </tr>
+                            <tr>
+                                <td><label >Last Name: </label></td>
+                                <td><input type="text" id="lname" name="lname"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">Username: </label>
+                                </td>
+                                <td><input type="text" id="uname" name="uname"></td>
+                            </tr>
+                            <tr>
+                                <td><label >Email: </label></td>
+                                <td><input type="email" id="ename" name="ename"></td>
+                            </tr>
+                            <tr>
+                                <td><label >Gender </label></td>
+                                <td><input type="radio" id="gen" name="gen" value="Male">Male
+                                    <input type="radio" id="gen" name="gen" value="Female">Female
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label >Date Of Birth : </label></td>
+                                <td><input type="date" id="dob" name="dob"></td>
+                            </tr>
+                            <tr>
+                                <td><label >New Password: </label></td>
+                                <td><input type="password" id="pass" name="pass"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Confirm  Password</label></td>
+                                <td><input type="password" name="cpass" id="cpass"></td>
+                            </tr>
+                        </table>
+                        <input type="submit" name="ss" id="buts" value="Sign up">
+                    </form>
+                </center>
+                </div>
+                <div>
+                    <i class="fa-solid fa-money-bill" style="color: #ffffff;"></i>
+                    <h2 align="center">Login    </h2>
+                    <center>
+                    <form action="loginvalid.php" method="post">
+                        
+                            <table cellspacing="15px" cellpadding="0px">
+                                <tr>
+                                    <td><label for="">Username: </label></td>
+                                    <td><input type="text" name="uname" id="uname"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="">Password: </label></td>
+                                    <td><input type="password" name="pass" id="pass"></td>
+                                </tr>
+                                
+                                   
+                                
+                            </table>
+                       
+                            <input type="submit" name="logs" id="buts" value="Login">
+                    </form>
+                </center>
+                </div>
+                
+             </div>
+        </div>
+
+    </div>
+</body>
+</html>

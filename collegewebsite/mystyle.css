@@ -1,0 +1,53 @@
+body{
+    margin: 10px;
+    color:antiquewhite;
+    background-color:black;
+    
+}
+.lefty{
+    background-color:black;
+}
+.righty{
+    background-color: rgb(43, 3, 3);
+}
+
+h2{
+    color:rgb(255, 185, 185)
+}
+ol li{
+    font-weight: bold;
+    color:yellow;
+}
+ul li {
+    font-style: italic;
+    color:azure;
+}
+table,tr,td{
+    border-radius: 10%;
+    color:black;
+    
+    background-color: azure;
+   
+
+}
+img{
+    border-radius: 20%;
+    padding: 5px;
+    width : 450px;
+}
+a{
+    text-align:center;
+    color:blueviolet;
+}
+a:visited{
+    color:rgb(0, 195, 255);
+}
+a:hover{
+    color:azure
+    ;
+
+}
+input:focus {
+  background-color: lightblue;
+}
+a:active{color:brown;}

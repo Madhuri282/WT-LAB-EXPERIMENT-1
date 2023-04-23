@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Registeration form </title>
+        <link rel ='stylesheet' type = 'text/css' href ='mystyle.css'>
+
+    </head>
+<body>
+<form name = 'student details' method ='get'>
+    <h1 align ='center'> Registration form </h1>
+    <table border ='0' cellspacing ='15' cellpadding ='0' align ='center'>
+        <tr>
+            <td> <label for ='username'>username: </label></td>
+            <td> <input name="username" type ='text' id= 'username' placeholder='enter your username' required></td>
+        </tr>
+        <tr>
+            <td> <label for ='email'>email: </label></td>
+            <td> <input name="email" type ='email' id= 'email' placeholder='enter your email' required></td>
+        </tr>
+        <tr>
+            <td> <label for ='gen'>gender: </label></td>
+            
+            <td> <input name="gen" type ='radio' id= 'gen'>Male
+                <input name="gen" type ='radio' id= 'gen'>female</td>
+        </tr>
+        <tr>
+            <td> <label for ='rel'>religion: </label></td>
+            
+            <td> <select name = 'rel' required>
+                <option val='hin'>HINDU</option>
+                <option val='tel'>MUSLIM</option>
+                <option val='eng'>CHRISTIAN</option>
+            
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td> <label for="dob">date of birth:</label>
+
+            </td>
+            <td><input name = 'dob' type ='date' id='dob'></td>
+
+        </tr>
+        <tr>
+            <td> <label for= 'leng'>languages</label></td>
+            <td> <input name ='lang' type ='checkbox' id='lang'>HINDI
+            <input name ='lang' type ='checkbox' id ='lang'>TELUGU
+            <input name ='lang' type ='checkbox' id='lang'> ENGLISH
+        </td>
+        </tr>
+        <TR>
+            <td><label for = 'adr'> Address </label></td>
+            <td><textarea rows='4' cols ='20' placeholder ='enter your address'></textarea></td>
+        </TR>
+        <tr>
+            <td><label for 'pwd' >password: </label></td>
+            <td> <input name = 'pwd' type= 'password' id='pwd' placeholder ='enter your password'required></td>
+        </tr>
+        <tr> 
+            <td><label for 'pwd' >confirm password: </label></td>
+            <td> <input name = 'pwd' type= 'password' id='pwd' placeholder ='confirm your password'required></td>
+            </tr><tr>
+            <td> <input name = 'sub' type ='submit' id='sub' value ='submit' required></td>
+            <td> <input name = 'res' type ='reset' id='sub' value ='reset' ></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

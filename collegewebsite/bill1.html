@@ -1,0 +1,262 @@
+<html>
+
+
+
+<head>
+    <style>
+        body{
+            background-image: url('stat.jpg');
+            background-repeat: no-repeat;
+            background-size: 1700px 1000px;
+        }
+        select,input[type="text"],textarea{
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        table,
+        tr,
+        td {
+          border: 2px solid black;
+          border-collapse: collapse;
+          padding: 5px;
+          margin-top: 30px;
+          margin: 0 auto;
+    
+        }
+        
+    
+        .pricelist {
+          text-align: center;
+        }
+    
+        .mybutton {
+          background-color:aliceblue;
+    
+          color: rgb(196, 0, 226);
+          padding: 15px 32px;
+          text-align: center;
+          border: none;
+          display: inline-block;
+          font-size: 16px;
+    
+          cursor: pointer;
+          background-color: #ffffff;
+          border-radius: 4px;
+        }
+        #writeme{
+            background-color: aliceblue;
+            border-color: #6f0152;
+            border-width: 2ch;
+        }
+        #op{
+            background-color: aquamarine;
+        }
+        #entrybox {
+          width: 20%;
+          height: 43px;
+          margin-left: 5px;
+          border: 2px solid #bea1f8;
+          border-radius: 6px;
+          background-color: #ffeffa;
+        }
+    
+        .bill {
+          margin-left: 23%;
+          margin-right: 20%;
+    
+        }
+    
+        .bill1 {
+          margin-left: 33%;
+          margin-right: 20%;
+    
+        }
+    
+        #sf {
+          height: 48px;
+          border: 2px solid #b4b39d;
+          border-radius: 4px;
+        }
+        
+    
+        .bill2 {
+          margin-left: 67%;
+          position: relative;
+        }
+         .bill3 {
+          margin-left: 50%;
+          position: absolute;
+        }
+    
+    </style>
+    
+    
+    
+  
+  <title>stationary bill</title>
+</head>
+<body>
+<div style="width: 100%; display:table;"> 
+     
+  <div class="pricelist">
+   <h1 style="color:#6f0152">welcome to college essentials shop!</h1>
+   <div style="display: table-row; height: 100px;">
+    <div style="width:20%;display:table-cell;">
+    <div>
+    <h1>MENU</h1>
+    <table id="mamy">
+      <tr>
+        <td>girls uniform</td>
+        <td>1300 rs per set</td>
+      </tr>
+      <tr>
+        <td>boys uniform</td>
+        <td>1200 rs per set</td>
+      </tr>
+
+        <tr>
+        
+        <td>record sheet</td>
+        <td>2 rs per sheet</td>
+        </tr>
+        <tr>
+            <td>binded record</td>
+            <td>220 rs per record</td>
+        </tr>
+        <tr>
+        <td>notebooks</td>
+        <td>40 rs per book</td>
+    </tr>
+      
+    </table>
+    
+  </div>
+  <br>
+  <br>
+  <br>
+</div>
+<div style="width:80%;display:table-cell;">
+    
+  <form class="bill1">
+    <select id="sf">
+  <option selected value = "gu">Girls uniform</option>
+  <option value = "bu">Boys uniform</option>
+  <option value = "rs">Record Sheet</option>
+  <option value = "br">Binded Records</option>
+  <option value = "nb">Notebooks</option>
+</select>
+    <input type="text" id="entrybox" pattern="\d*" placeholder="quantity">
+    <hr>
+    <input type="button" value="ADD T0 CART" class="mybutton" id="getme">
+  </form>
+  <br><br>
+  <textarea class="bill" cols="70" rows="12" id="writeme"></textarea>
+
+  <br><br>
+  <textarea class="bill" cols="70" rows="3" id="op"></textarea>
+  <br>
+ <br>
+ 
+  
+      <span><input type="submit" value="EMPTY CART"  id="clr"></span>
+      <br>
+      <span><input type="submit" value="PAY BILL"  id="out"></span>
+    
+  
+  <br>
+  
+  
+  
+  </div>
+  
+</div>
+  </div>
+  </div>
+  
+  </body>
+  <script>
+    var straw = 1300;
+    var apple = 1200;
+    var grapes = 2;
+    var pome = 40;
+    var gu = 220;
+    var total = 0;
+    var check = 1;
+    var gw;
+    var sfruit;
+    var perkg;
+    var adder = document.querySelector("#getme");
+    adder.addEventListener("click", getMe);
+    var by = document.querySelector("#out");
+    by.addEventListener("click", checkOut);
+    var cme = document.querySelector("#clr");
+    cme.addEventListener("click", clearMe);
+
+    function getMe() {
+      sfruit = document.querySelector("#sf").value;
+      perkg = parseFloat(document.querySelector("#entrybox").value);
+      gw = document.querySelector("#writeme");
+      go= document.querySelector("#op");
+      if (Number.isNaN(perkg) === true) {
+        alert("Only Numbers !!! Or The Field is Empty");
+        check = 0;
+      }
+      else if (perkg<0) {
+        alert("Negative value!! @stupid");
+        check = 0;
+      }
+      else{
+        check = 1;
+      }
+      if (check == 1) {
+     
+        switch (sfruit) {
+          case "gu":
+            var st = straw * perkg;
+            gw.value += "Girls uniform " + perkg + " pieces = " + st + " rs\r";
+            total += st;
+            perkg.value = "";
+            break;
+          case "bu":
+            var at = apple * perkg;
+            gw.value += "boys uniform " + perkg + " pieces = " + at + " rs\r";
+            total += at;
+            perkg.value = "";
+            break;
+          case "rs":
+            var gr = grapes * perkg;
+            gw.value += "record sheets " + perkg + " sheets = " + gr + " rs\r";
+            total += gr;
+            perkg.value = "";
+            break;
+          case "br":
+            var ga = gu * perkg;
+            gw.value += "binded records " + perkg + " pieces = " + ga + " RS\r";
+            total += ga;
+            perkg.value = "";
+            break;
+          case "nb":
+            var pomy = pome * perkg;
+            gw.value += "notebooks " + perkg + " pieces = " + pomy + " rs\r";
+            total += pomy;
+            perkg.value = "";
+            break;
+        }
+
+      }
+    }
+
+    function checkOut() {
+      
+      go.value += "TOTAL     =     " + total + " RS ";
+      go.value +="   THANKYOU!"
+      
+      total = 0;
+    }
+    function clearMe () {
+      gw.value = "";
+    }
+
+  </script>
+
+</html>
